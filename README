@@ -1,0 +1,32 @@
+This project is basically a demonstration project where we follow the simple steps to Create the
+KAFKA Spring boot project using two Microservices.
+
+
+#USE case :
+This KAFKA Spring boot project is the use Case of ZOMATO Deliver APP, where we update the location of
+deliver boy while ordering the food to User.
+
+1st microservice -> Delivery boy
+2nd Microservice -> EndUser
+
+#PreRequistive:
+-> Spring boot 3.5.0 version
+-> Kafka latest version
+-> Maven/Gradle
+-> Postman
+
+-->Steps to install Kafka and setup and Server start, Commands:
+#Start Zookeeper server :
+kafka_2.13-3.5.0>bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+#Start Kafka Server:
+kafka_2.13-3.5.0>bin\windows\kafka-server-start.bat config\server.properties
+
+#Create Topic:
+kafka_2.13-3.5.0>bin\windows\kafka-topics.bat --create --topic "topic name" --bootstrap-server localhost:9092
+
+#Write Events in the Topic:
+kafka_2.13-3.5.0>bin\windows\kafka-console-producer.bat --topic "topic name" --bootstrap-server localhost:9092
+
+#Read Events for the Topic:
+kafka_2.13-3.5.0>bin\windows\kafka-console-consumer.bat --topic "topic name" --from-beginning --bootstrap-server localhost:9092
